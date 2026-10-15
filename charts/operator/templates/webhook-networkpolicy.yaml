@@ -2,7 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: {{ include "workbenches-operator.prefixed" (list . "controller-manager-allow-ingress") }}
+  name: {{ include "workbenches-operator.prefixed" (list . "allow-ingress") }}
   namespace: {{ .Values.operatorNamespace | quote }}
   labels:
     {{- include "workbenches-operator.labels" . | nindent 4 }}
